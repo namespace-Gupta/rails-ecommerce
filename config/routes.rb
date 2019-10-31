@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'customers/index'
-  get 'customers/alphabetized'
-  get 'customers/missing_email'
+  get 'customers/' => 'customers#index', as: 'customers'
+  get 'customers/alphabetized' => 'customers#alphabetized', as: 'alphabetized'
+  get 'customers/missing_email' => 'customers#missing_email', as: 'missing_email'
 
-  resources :customers, only: %i[index]
+  # resources :customers, only: %i[index]
 
   root to: 'customers#index'
   devise_for :admin_users, ActiveAdmin::Devise.config

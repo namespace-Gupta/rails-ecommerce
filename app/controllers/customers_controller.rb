@@ -5,7 +5,11 @@ class CustomersController < ApplicationController
     @customers = Customer.all
   end
 
-  def alphabetized; end
+  def alphabetized
+    @customers = Customer.all.order(:first_name)
+  end
 
-  def missing_email; end
+  def missing_email
+    @customers = Customer.all.where(email: [nil, ''])
+  end
 end
