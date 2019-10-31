@@ -59,6 +59,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 # Active Admin Gem
 gem 'activeadmin'
+gem 'bulma-rails', '~> 0.7.4'
+gem 'bulma-extensions-rails'
 
 
 
